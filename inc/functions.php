@@ -452,7 +452,7 @@ function eventbrite_get_ticket_form_widget_height() {
 		$height -= 74;
 	}
 
-	return (int) apply_filters( 'eventbrite_ticket_form_widget_height', $height );
+	return (int) apply_filters( 'eventbrite_ticket_form_widget_height', $height + 50);
 }
 endif;
 
