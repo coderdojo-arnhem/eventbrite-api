@@ -13,7 +13,6 @@
                 while ( $events->have_posts() ) : 
                     $events->the_post();
                     $venue = eventbrite_event_venue();
-                    
                     if ( $first ):
                         $first = false;
                         ?>
@@ -32,7 +31,7 @@
                         <?php
                     else:
                         ?>
-						<h4><?= mysql2date('j F', eventbrite_event_start()->local) ?>: <a href="?eventbrite_id=<?php the_ID(); ?>"><?php the_title(); ?></a></h4>
+						<h4><?= mysql2date('j F', eventbrite_event_start()->local) ?>: <a target="_blank" href="<?= eventbrite_event_eb_url() ?>"><?php the_title(); ?></a></h4>
                         <?php
                     endif;
                 endwhile;         
